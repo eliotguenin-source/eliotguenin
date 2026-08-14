@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+
+  <title>Recherche — Eliot Guenin</title>
+  <link rel="stylesheet" href="research.css">
+  <script src="lang.js"></script>
+  <style>header{ position: relative; } #lang-toggle{ position: fixed; right: 16px; top: 12px; }</style>
+</head>
+
+  <body>
+    <header>
+      <a class="font-size" href="index_fr.html">Eliot Guenin</a>
+      <nav class="font-size">
+        <a class="font-size" href="about_fr.html">à propos</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="font-size" href="research_fr.html">recherche</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="font-size" href="works_fr.html">œuvres</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="font-size" href="contact_fr.html">contact</a>
+      </nav>
+      <button id="lang-toggle" aria-label="Toggle language" type="button">EN</button>
+    </header>
+
+  <main class="container">
+    <h1 class="h2" data-i18n="research_heading">Recherche</h1>
+    <section class="Police-text">
+      <p data-i18n="research_text">Espace réservé pour la description des recherches et des projets. Ajoutez vos textes, liens et publications ici.</p>
+    </section>
+  </main>
+
+    <footer class="site-footer">
+      <p>&copy; Photo : Inès-Renée Canadas <span id="year"></span></p>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+  </body>
+
+</html>

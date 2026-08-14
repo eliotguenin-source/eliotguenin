@@ -6,24 +6,30 @@
 
   <title >eliotguenin.com</title>
   <link rel="stylesheet" href="main.css">
+  <script src="lang.js"></script>
+  <style>
+    header{ position: relative; }
+    #lang-toggle{ position: absolute; right: 16px; top: 12px; background: rgba(0,0,0,0.6); color: white; border: none; padding: 6px 8px; border-radius: 4px; cursor: pointer; }
+  </style>
 </head>
 
   <body>
     <header>
       <a class="font-size" href="index.html">Eliot Guenin</a>
       <nav class="font-size">
-        <a class="font-size" href="about.html">about</a>
+        <a class="font-size" href="about.html" data-i18n="nav_about">about</a>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <a class="font-size" href="research.html" style="color: aliceblue;">research</a>
+          <a class="font-size" href="research.html" style="color: aliceblue;" data-i18n="nav_research">research</a>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <a class="font-size" href="works.html" style="color: aliceblue;">works</a>
+          <a class="font-size" href="works.html" style="color: aliceblue;" data-i18n="nav_works">works</a>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a class="font-size" href="contact.html" style="color: aliceblue;">contact</a>
+          <a class="font-size" href="contact.html" style="color: aliceblue;" data-i18n="nav_contact">contact</a>
       </nav>
+      <button id="lang-toggle" aria-label="Toggle language" type="button">FR</button>
     </header>
 
     <main>
-      <h1 class="TITLE"> E&nbsp;l&nbsp;i&nbsp;o&nbsp;t&nbsp; &nbsp;&nbsp;  G&nbsp; u&nbsp; e&nbsp; n&nbsp; i&nbsp; n<br>-<br>Researcher & Composer</h1>
+      <h1 class="TITLE"> E&nbsp;l&nbsp;i&nbsp;o&nbsp;t&nbsp; &nbsp;&nbsp;  G&nbsp; u&nbsp; e&nbsp; n&nbsp; i&nbsp; n<br>-<br><span data-i18n="title_sub">Researcher & Composer</span></h1>
     </main>
 
     <footer class="site-footer">

@@ -6,30 +6,33 @@
 
   <title >eliotguenin.com</title>
   <link rel="stylesheet" href="about.css">
+  <script src="lang.js"></script>
+  <style>
+    header{ position: relative; }
+    #lang-toggle{ position: absolute; right: 16px; top: 12px; background: rgba(0,0,0,0.6); color: white; border: none; padding: 6px 8px; border-radius: 4px; cursor: pointer; }
+  </style>
 </head>
 
   <body>
     <header>
       <a class="font-size" href="index.html">Eliot Guenin</a>
       <nav class="font-size">
-        <a class="font-size" href="about.html">about</a>
+        <a class="font-size" href="about.html" data-i18n="nav_about">about</a>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a class="font-size" href="research.html">research</a>
+          <a class="font-size" href="research.html" data-i18n="nav_research">research</a>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a class="font-size" href="works.html">works</a>
+          <a class="font-size" href="works.html" data-i18n="nav_works">works</a>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a class="font-size" href="contact.html">contact</a>
+          <a class="font-size" href="contact.html" data-i18n="nav_contact">contact</a>
       </nav>
+      <button id="lang-toggle" aria-label="Toggle language" type="button">FR</button>
     </header>
- <section class="container"> 
+   <section class="container"> 
     <br><br>
 <div class="imagetext" >  <img src="07D55626-0274-40B7-841F-3C06E8F48A8E_1_201_a.jpeg"> </div>
 <div> 
-    <h2 class="h2">About</h2>
-    <p class="Police-text">Eliot Guenin is a French composer, researcher and pianist based in Paris. Currently studying composition with Aurélien Dumont and Laurent Durupt in the Créteil Conservatory, he also is a student of the Arts, Litteratures & Languages Master of the EHESS, Ecole des Hautes Etudes en Sciences Sociales under the mentoring of Esteban Buch, where he continues his cursus after his Musicology Bachelor from the Lyon II University. <br> <br> His works, standing at the intersection of theoretical research and sonic experimentation, are inherently interdisciplinary and include a piece for solo Cello for Elena Andreyev or an open work for L'Instant Donné.
-    <br><br> On the research side, he explores the theme of "Sonic Biopolitics in the Streaming Era: Subjectivation of Individual Somatheques through Sound to the Capitalocene."
-He aims to examine how the algorithmic flows of streaming platforms serve not merely as vehicles for distribution, but as mechanisms of power that shape individual subjectivities. The project will involve a biopolitical interrogation of contemporary music and the ways in which it is consumed via streaming.
-
+    <h2 class="h2" data-i18n="about_heading">About</h2>
+    <p class="Police-text" data-i18n="about_text" data-i18n-html="1">Eliot Guenin is a French composer, researcher and pianist based in Paris. Currently studying composition with Aurélien Dumont and Laurent Durupt in the Créteil Conservatory, he also is a student of the Arts, Litteratures & Languages Master of the EHESS, Ecole des Hautes Etudes en Sciences Sociales under the mentoring of Esteban Buch, where he continues his cursus after his Musicology Bachelor from the Lyon II University.<br><br>His works, standing at the intersection of theoretical research and sonic experimentation, are inherently interdisciplinary and include a piece for solo Cello for Elena Andreyev or an open work for L'Instant Donné.<br><br>On the research side, he explores the theme of "Sonic Biopolitics in the Streaming Era: Subjectivation of Individual Somatheques through Sound to the Capitalocene." He aims to examine how the algorithmic flows of streaming platforms serve not merely as vehicles for distribution, but as mechanisms of power that shape individual subjectivities. The project will involve a biopolitical interrogation of contemporary music and the ways in which it is consumed via streaming.
     </p></div>
 </section>
    

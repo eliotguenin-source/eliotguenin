@@ -6,26 +6,32 @@
 
   <title>Research — Eliot Guenin</title>
   <link rel="stylesheet" href="research.css">
+  <script src="lang.js"></script>
+  <style>
+    header{ position: relative; }
+    #lang-toggle{ position: absolute; right: 16px; top: 12px; background: rgba(0,0,0,0.6); color: white; border: none; padding: 6px 8px; border-radius: 4px; cursor: pointer; }
+  </style>
 </head>
 
   <body>
     <header>
       <a class="font-size" href="index.html">Eliot Guenin</a>
       <nav class="font-size">
-        <a class="font-size" href="about.html">about</a>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a class="font-size" href="research.html">research</a>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a class="font-size" href="works.html">works</a>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a class="font-size" href="contact.html">contact</a>
+        <a class="font-size" href="about.html" data-i18n="nav_about">about</a>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a class="font-size" href="research.html" data-i18n="nav_research">research</a>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a class="font-size" href="works.html" data-i18n="nav_works">works</a>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a class="font-size" href="contact.html" data-i18n="nav_contact">contact</a>
       </nav>
+      <button id="lang-toggle" aria-label="Toggle language" type="button">FR</button>
     </header>
 
     <main class="container">
-      <h1 class="h2">Research</h1>
+      <h1 class="h2" data-i18n="research_heading">Research</h1>
       <section class="Police-text">
-        <p>Placeholder for research description and projects. Add your texts, links, and publications here.</p>
+        <p data-i18n="research_text">Placeholder for research description and projects. Add your texts, links, and publications here.</p>
       </section>
     </main>
 
