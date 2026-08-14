@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+
+  <title>eliotguenin.com — FR</title>
+  <link rel="stylesheet" href="main.css">
+  <script src="lang.js"></script>
+  <style>
+    header{ position: relative; }
+    #lang-toggle{ position: fixed; right: 16px; top: 12px; }
+  </style>
+</head>
+
+  <body>
+    <header>
+      <a class="font-size" href="index_fr.html">Eliot Guenin</a>
+      <nav class="font-size">
+        <a class="font-size" href="about_fr.html">à propos</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="font-size" href="research_fr.html">recherche</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="font-size" href="works_fr.html">œuvres</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="font-size" href="contact_fr.html">contact</a>
+      </nav>
+      <button id="lang-toggle" aria-label="Toggle language" type="button">EN</button>
+    </header>
+
+    <main>
+      <h1 class="TITLE"> E&nbsp;l&nbsp;i&nbsp;o&nbsp;t&nbsp; &nbsp;&nbsp;  G&nbsp; u&nbsp; e&nbsp; n&nbsp; i&nbsp; n<br>-<br><span data-i18n="title_sub">Chercheur et Compositeur</span></h1>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; Photo : Inès-Renée Canadas <span id="year"></span></p>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+  </body>
+
+</html>

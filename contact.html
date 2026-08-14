@@ -5,54 +5,60 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Contact — Eliot Guenin</title>
   <link rel="stylesheet" href="contact.css">
+  <script src="lang.js"></script>
+  <style>
+    header{ position: relative; }
+    #lang-toggle{ position: absolute; right: 16px; top: 12px; background: rgba(0,0,0,0.6); color: white; border: none; padding: 6px 8px; border-radius: 4px; cursor: pointer; }
+  </style>
 </head>
 
   <body>
     <header>
         <a class="font-size" href="index.html">Eliot Guenin</a>
       <nav class="font-size">
-<a class="font-size" href="about.html">about</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a class="font-size" href="about.html" data-i18n="nav_about">about</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-<a class="font-size" href="research.html">research</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a class="font-size" href="research.html" data-i18n="nav_research">research</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-<a class="font-size" href="works.html">works</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a class="font-size" href="works.html" data-i18n="nav_works">works</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-<a class="font-size" href="contact.html" >contact</a> 
+<a class="font-size" href="contact.html" data-i18n="nav_contact">contact</a> 
       </nav>
+      <button id="lang-toggle" aria-label="Toggle language" type="button">FR</button>
     </header>
 
   <main class="contact-page">
     <section class="font-size">
-      <h1>Contact</h1>
+      <h1 data-i18n="contact_heading">Contact</h1>
       <p>If you'd like to get in touch, fill out the form below or email me directly.</p>
 
       <form id="contactForm" class="contact-form">
         <div class="name-row">
           <div class="field">
-            <label for="firstName">First Name</label>
-            <input id="firstName" name="firstName" type="text" required minlength="2" autocomplete="given-name">
+            <label for="firstName" data-i18n="form_firstName">First Name</label>
+            <input id="firstName" name="firstName" type="text" required minlength="2" autocomplete="given-name" data-i18n="form_firstName">
           </div>
           <div class="field">
-            <label for="lastName">Last Name</label>
-            <input id="lastName" name="lastName" type="text" required minlength="2" autocomplete="family-name">
+            <label for="lastName" data-i18n="form_lastName">Last Name</label>
+            <input id="lastName" name="lastName" type="text" required minlength="2" autocomplete="family-name" data-i18n="form_lastName">
           </div>
         </div>
 <br>
-        <label for="email">Email</label>
+        <label for="email" data-i18n="form_email">Email</label>
         <br>
         <input id="email" name="email" type="email" required autocomplete="email">
  <br> <br>
-        <label for="subject">Subject</label>
+        <label for="subject" data-i18n="form_subject">Subject</label>
          <br>
         <input id="subject" name="subject" type="text">
         <br>
         <br>
 <br>
-        <label for="message">Message</label>  <br>
-        <textarea id="message" name="message" rows="6" required></textarea>
+        <label for="message" data-i18n="form_message">Message</label>  <br>
+        <textarea id="message" name="message" rows="6" required data-i18n="form_message"></textarea>
 
         <div class="form-actions">
-          <button type="submit">Send Message</button>
+          <button type="submit" data-i18n="form_submit">Send Message</button>
         </div>
 
         <div id="status" class="status" aria-live="polite"></div>
@@ -89,21 +95,44 @@
       var message = form.message.value.trim();
 
       if (!first || !last || !email || !message) {
-        document.getElementById('status').textContent = 'Please complete all required fields.';
+        document.getElementById('status').textContent = (window.t && window.t('form_required')) || 'Please complete all required fields.';
         return;
       }
 
-      var body = 'Name: ' + name + '\nEmail: ' + email + '\n\n' + message;
-      var mailto = 'mailto:eliot.guenin@gmail.com'
-        + '?subject=' + encodeURIComponent(subject)
-        + '&body=' + encodeURIComponent(body);
+      // Configure a Formspree endpoint here (e.g. https://formspree.io/f/yourformid)
+      var FORMSPREE_ENDPOINT = 'https://formspree.io/f/mppalyab';
+      if (!FORMSPREE_ENDPOINT) {
+        document.getElementById('status').textContent = (window.t && window.t('form_not_configured')) || 'Form not configured. Set FORMSPREE_ENDPOINT in the script to enable in-browser sending.';
+        return;
+      }
 
-      // Try opening the user's email client. This is a graceful fallback for sites without a backend.
-      window.location.href = mailto;
-      document.getElementById('status').textContent = 'Opening your email client...';
+      var formData = new FormData();
+      formData.append('firstName', first);
+      formData.append('lastName', last);
+      formData.append('email', email);
+      formData.append('subject', subject);
+      formData.append('message', message);
+      formData.append('_subject', subject);
+      formData.append('_replyto', email);
 
-      // Optionally, clear the form after a short delay
-      setTimeout(function(){ form.reset(); }, 800);
+      document.getElementById('status').textContent = (window.t && window.t('sending')) || 'Sending…';
+
+      fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      }).then(function(response) {
+        if (response.ok) {
+          document.getElementById('status').textContent = (window.t && window.t('sent_success')) || 'Message sent — thank you!';
+          form.reset();
+        } else {
+          return response.json().then(function(data) {
+            document.getElementById('status').textContent = (data && data.error) ? data.error : ((window.t && window.t('submission_failed')) || 'Submission failed.');
+          });
+        }
+      }).catch(function(err) {
+        document.getElementById('status').textContent = (window.t && window.t('network_error')) || 'Network error. Please try again later.';
+      });
     });
   </script>
 </body>
