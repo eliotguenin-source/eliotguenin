@@ -1,0 +1,100 @@
+html, body{
+    height: 100%;
+      background-color: #eceae6;}
+      
+.font-size {
+    font-size: 25px;
+        font-family: 'American Typewriter';
+    
+        font-weight: 100;
+        font-display: swap;
+    text-align: center;
+    color: rgb(9, 10, 10);
+    text-decoration: none;
+}
+.TITLE {
+    font-size: 65px;
+        font-family: 'AvidOmnes Léger';
+    
+        font-weight: 100;
+        font-display: swap;
+    text-align: center;
+    color: aliceblue;
+    
+}
+
+.container {
+    max-width: 100%;
+  max-inline-size: 100%;
+        overflow: auto; /* contain floats so footer doesn't overlap */
+}
+
+.h2 {
+    font-family: 'American Typewriter';
+    font-size: 30px;
+        font-weight: 600;
+        font-display: swap;
+    text-align: justify;
+    margin-right: 100px; 
+    line-height: 1.8;
+}
+
+    .imagetext {
+        display: block;
+        max-width: 600px;
+        width: 100%;
+        margin: 0 auto 1rem;
+}
+
+    .imagetext img {
+        width: 100%;
+        height: auto;
+        display: block;
+}
+
+/* Ensure image and text stack nicely on small screens */
+@media (min-width: 900px) {
+    .imagetext {
+        float: left;
+        margin-right: 2rem;
+        margin-left: 100px;
+        max-width: 25%;
+    }
+    .Police-text {
+        margin-left: 0;
+        margin-right: 100px;
+    }
+}
+
+.Police-text {
+    font-family: 'American Typewriter';
+    font-size: larger;
+        font-weight: 400;
+        font-display: swap;
+    text-align: justify;
+    margin-right: 100px; 
+    margin-top: 100px;
+    line-height: 1.8;
+}
+
+
+.BIG {
+    font-size: 40px;
+}
+
+about {
+    flex: 1 0 auto;
+}
+
+/* Footer styling for a persistent bottom footer */
+.site-footer {
+    position: fixed;
+      bottom: 0;
+    flex-shrink: 0;
+    padding: 1rem 0;
+    text-align: center;
+    background: rgba(0,0,0,0.35);
+    color: aliceblue;
+    width: 100%;
+    margin-top: auto;
+}

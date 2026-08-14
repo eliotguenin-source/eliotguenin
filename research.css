@@ -1,0 +1,41 @@
+html, body{
+    height: 100%;
+      background-color: #eceae6;
+}
+
+.font-size {
+    font-size: 25px;
+        font-family: 'American Typewriter';
+        font-weight: 100;
+    text-align: center;
+    color: rgb(9, 10, 10);
+    text-decoration: none;
+}
+.h2 {
+    font-family: 'American Typewriter';
+    font-size: 30px;
+        font-weight: 600;
+    text-align: left;
+    margin: 2rem 100px;
+}
+
+.Police-text {
+    font-family: 'American Typewriter';
+    font-size: larger;
+        font-weight: 400;
+    text-align: justify;
+    margin: 0 100px;
+    line-height: 1.8;
+}
+
+.site-footer {
+    position: fixed;
+      bottom: 0;
+    flex-shrink: 0;
+    padding: 1rem 0;
+    text-align: center;
+    background: rgba(0,0,0,0.35);
+    color: aliceblue;
+    width: 100%;
+    margin-top: auto;
+}

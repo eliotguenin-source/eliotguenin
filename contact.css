@@ -1,0 +1,127 @@
+html, body{
+      height: 100%;
+      background-image: url(0CD07738-D266-471D-B188-7F8F97377722_1_201_a.jpeg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+      background-size: cover;
+}
+      
+.font-size {
+    font-size: 25px;
+        font-family: 'American Typewriter';
+    
+        font-weight: 100;
+        font-display: swap;
+    text-align: center;
+    color: aliceblue;
+    text-decoration: none;
+}
+.TITLE {
+    font-size: 70px;
+        font-family: 'AvidOmnes Léger';
+    
+        font-weight: 100;
+        font-display: swap;
+    text-align: center;
+    color: aliceblue;
+}
+
+    .Footer {
+       font-family: 'American Typewriter';
+    font-size: larger;
+        font-weight: 400;
+        font-display: swap;
+    text-align: justify;
+    margin-right: 100px;
+    line-height: 1.8;
+    color: aliceblue;
+    text-decoration: none; 
+    }
+
+.Police-text {
+    font-family: 'American Typewriter';
+    font-size: larger;
+        font-weight: 400;
+        font-display: swap;
+    text-align: justify;
+    margin-right: 100px;
+    margin-top: 100px;
+    line-height: 1.8;
+}
+
+.imagetext {
+width: 100%;
+width: 730px; height: 400px;
+    float: left;
+    margin-left: 100px;
+
+}
+
+.BIG {
+    font-size: 40px;
+}
+
+/* Footer styling for a persistent bottom footer */
+.site-footer {
+    position: fixed;
+      bottom: 0;
+    flex-shrink: 0;
+    padding: 1rem 0;
+    text-align: center;
+    background: rgba(0,0,0,0.35);
+    color: aliceblue;
+    width: 100%;
+    margin-top: auto;
+}
+
+/* Contact form styles */
+.contact-page {
+    padding: 3rem 2rem 6rem;
+}
+.contact-form {
+    max-width: 760px;
+    margin: 0 auto;
+    background: rgba(255,255,255,0.85);
+    padding: 1.5rem;
+    border-radius: 6px;
+    color: #090a0a;
+}
+.contact-form .name-row {
+    display: flex;
+    gap: 1rem;
+}
+.contact-form .field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.contact-form label {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: 'American Typewriter';
+}
+.contact-form textarea { resize: vertical; }
+.contact-form .form-actions { text-align: right; margin-top: 0.75rem; }
+.contact-form button {
+    background: #090a0a;
+    color: white;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.contact-form .status { margin-top: 0.5rem; color: #b22222; }
+
+@media (max-width: 600px) {
+    .contact-form .name-row { flex-direction: column; }
+}
