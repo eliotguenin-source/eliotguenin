@@ -1,0 +1,58 @@
+body{
+      background-image: url(A5AA1AED-E4DA-48D4-9340-93576A8ECA53_1_105_c.jpeg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+      background-size: cover;
+
+}
+.font-size {
+    font-size: 25px;
+        font-family: 'American Typewriter';
+    
+        font-weight: 100;
+        font-display: swap;
+    text-align: center;
+    color: aliceblue;
+    text-decoration: none;
+}
+.TITLE {
+    font-size: 70px;
+        font-family: 'AvidOmnes Léger';
+    
+        font-weight: 100;
+        font-display: swap;
+    text-align: center;
+    color: aliceblue;
+}
+.Police-text {
+    font-family: 'American Typewriter';
+    font-size: larger;
+        font-weight: 400;
+        font-display: swap;
+    text-align: justify;
+    margin-right: 100px;
+    margin-top: 100px;
+    line-height: 1.8;
+
+
+}
+
+    .Footer {
+       font-family: 'American Typewriter';
+    font-size: larger;
+        font-weight: 400;
+        font-display: swap;
+    text-align: justify;
+
+    margin-right: 100px;
+    margin-top: 100px;
+    line-height: 1.8;
+    color: aliceblue;
+    text-decoration: none; 
+    }
+.imagetext 
+
+.BIG {
+    font-size: 40px;
+}
