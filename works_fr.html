@@ -14,27 +14,27 @@
     <header>
       <a class="font-size" href="index_fr.html">Eliot Guenin</a>
       <nav class="font-size">
-        <a class="font-size" href="about_fr.html">à propos</a>
+        <a class="font-size" href="about_fr.html" data-i18n="nav_about">à propos</a>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a class="font-size" href="research_fr.html">recherche</a>
+        <a class="font-size" href="research_fr.html" data-i18n="nav_research">recherche</a>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a class="font-size" href="works_fr.html">œuvres</a>
+        <a class="font-size" href="works_fr.html" data-i18n="nav_works">œuvres</a>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a class="font-size" href="contact_fr.html">contact</a>
+        <a class="font-size" href="contact_fr.html" data-i18n="nav_contact">contact</a>
       </nav>
       <button id="lang-toggle" aria-label="Toggle language" type="button">EN</button>
     </header>
 
     <main class="container">
-      <h1 class="h2">Œuvres</h1>
+      <h1 class="h2" data-i18n="works_heading">Œuvres</h1>
       <section class="Police-text">
-        <p>Partitions, enregistrements et performances. Ajoutez des liens ou intégrez des lecteurs ici.</p>
+        <p data-i18n="works_text">Toutes les partitions et les enregistrements joints ici sont libres d’utilisation et de téléchargement.</p>
 
         <article class="work-item">
-          <h2>DUALIS — Pour Violoncelle seul (2025)</h2>
+          <h2 data-i18n="work_dualis_title">DUALIS — Pour Violoncelle seul (2025)</h2>
           <div class="download-row">
-            <a class="download-btn" href="DUALIS - Pour violoncelle seul.pdf" download>Télécharger DUALIS (PDF)</a>
-            <a class="download-btn" href="DUALIS - Elena Andreyev.mp3" download>Télécharger MP3</a>
+            <a class="download-btn" href="DUALIS - Pour violoncelle seul.pdf" download data-i18n="download_pdf">Télécharger DUALIS (PDF)</a>
+            <a class="download-btn" href="DUALIS - Elena Andreyev.mp3" download data-i18n="download_mp3">Télécharger MP3</a>
           </div>
           <div class="pdf-preview two-page" id="pdfjs-viewer">
             <div class="pdfjs-container">
@@ -42,18 +42,19 @@
               <canvas id="pdf-page-2" class="pdf-canvas" aria-label="DUALIS page 2"></canvas>
             </div>
           </div>
+          <div class="pdf-note" aria-live="polite"></div>
           <div class="audio-player">
-            <h3>Enregistrement — DUALIS</h3>
+            <h3 data-i18n="recording">Enregistrement — DUALIS</h3>
             <audio controls preload="none" id="dualis-audio">
               <source src="DUALIS - Elena Andreyev.mp3" type="audio/mpeg">
-              Votre navigateur ne supporte pas l'élément audio. Vous pouvez <a href="DUALIS - Elena Andreyev.mp3">télécharger le MP3</a>.
+              <span data-i18n-html="1" data-i18n="audio_fallback">Votre navigateur ne supporte pas l'élément audio. Vous pouvez <a href="DUALIS - Elena Andreyev.mp3">télécharger le MP3</a>.</span>
             </audio>
           </div>
         </article>
         <article class="work-item">
-          <h2>Esquisse — for a bowless cellist (finished?)</h2>
+          <h2 data-i18n="work_esquisse_title">Esquisse — pour un violoncelliste sans archet (terminée ?)</h2>
           <div class="download-row">
-            <a class="download-btn" href="esquisse for a bowless cellist finished%3F.pdf" download>Télécharger Esquisse (PDF)</a>
+            <a class="download-btn" href="esquisse for a bowless cellist finished%3F.pdf" download data-i18n="download_esquisse">Télécharger Esquisse (PDF)</a>
           </div>
           <div class="pdf-preview two-page" id="pdfjs-viewer-5">
             <div class="pdfjs-container">
@@ -64,10 +65,10 @@
           <div class="pdf-note" aria-live="polite"></div>
         </article>
         <article class="work-item">
-          <h2>Conducteur — Numb(er) Piece</h2>
+          <h2 data-i18n="work_conducteur_title">Conducteur — Numb(er) Piece</h2>
           <div class="download-row">
-            <a class="download-btn" href="Conducteur - Numb(er) Piece - Eliot Guenin.pdf" download>Télécharger Numb(er) Piece (PDF)</a>
-            <a class="download-btn" href="Numb(er) Piece Guenin Eliot.mp3" download>Télécharger MP3</a>
+            <a class="download-btn" href="Conducteur - Numb(er) Piece - Eliot Guenin.pdf" download data-i18n="download_conducteur_pdf">Télécharger Numb(er) Piece (PDF)</a>
+            <a class="download-btn" href="Numb(er) Piece Guenin Eliot.mp3" download data-i18n="download_conducteur_mp3">Télécharger MP3</a>
           </div>
           <div class="pdf-preview two-page" id="pdfjs-viewer-2">
             <div class="pdfjs-container">
@@ -77,19 +78,19 @@
           </div>
           <div class="pdf-note" aria-live="polite"></div>
           <div class="audio-player">
-            <h3>Enregistrement — Numb(er) Piece</h3>
+            <h3 data-i18n="recording_numb">Enregistrement — Numb(er) Piece</h3>
             <audio controls preload="none" id="numb-audio">
               <source src="Numb(er) Piece Guenin Eliot.mp3" type="audio/mpeg">
-              Votre navigateur ne supporte pas l'élément audio. Vous pouvez <a href="Numb(er) Piece Guenin Eliot.mp3">télécharger le MP3</a>.
+              <span data-i18n-html="1" data-i18n="audio_fallback">Votre navigateur ne supporte pas l'élément audio. Vous pouvez <a href="Numb(er) Piece Guenin Eliot.mp3">télécharger le MP3</a>.</span>
             </audio>
           </div>
         </article>
 
         <article class="work-item">
-          <h2>ITERATIONS — EMERGENCES</h2>
+          <h2 data-i18n="work_iterations_title">ITERATIONS — EMERGENCES</h2>
           <div class="download-row">
-            <a class="download-btn" href="ITERATIONS-EMERGENCES_ELIOT-GUENIN.pdf" download>Télécharger ITERATIONS (PDF)</a>
-            <a class="download-btn" href="ITERATIONS - BALAS:ECHARDOUR.mp3" download>Télécharger MP3</a>
+            <a class="download-btn" href="ITERATIONS-EMERGENCES_ELIOT-GUENIN.pdf" download data-i18n="download_iterations_pdf">Télécharger ITERATIONS (PDF)</a>
+            <a class="download-btn" href="ITERATIONS - BALAS:ECHARDOUR.mp3" download data-i18n="download_iterations_mp3">Télécharger MP3</a>
           </div>
           <div class="pdf-preview two-page" id="pdfjs-viewer-3">
             <div class="pdfjs-container">
@@ -99,41 +100,18 @@
           </div>
           <div class="pdf-note" aria-live="polite"></div>
           <div class="audio-player">
-            <h3>Enregistrement — ITERATIONS</h3>
+            <h3 data-i18n="recording_iterations">Enregistrement — ITERATIONS</h3>
             <audio controls preload="none" id="iterations-audio">
               <source src="ITERATIONS - BALAS:ECHARDOUR.mp3" type="audio/mpeg">
-              Votre navigateur ne supporte pas l'élément audio. Vous pouvez <a href="ITERATIONS - BALAS:ECHARDOUR.mp3">télécharger le MP3</a>.
+              <span data-i18n-html="1" data-i18n="audio_fallback">Votre navigateur ne supporte pas l'élément audio. Vous pouvez <a href="ITERATIONS - BALAS:ECHARDOUR.mp3">télécharger le MP3</a>.</span>
             </audio>
           </div>
         </article>
         <article class="work-item">
-          <h2>Conducteur — Numb(er) Piece</h2>
+          <h2 data-i18n="work_petite_title">Petite pièce pour Piano — À ma sœur Nine</h2>
           <div class="download-row">
-            <a class="download-btn" href="Conducteur - Numb(er) Piece - Eliot Guenin.pdf" download>Télécharger Numb(er) Piece (PDF)</a>
-            <a class="download-btn" href="Numb(er) Piece Guenin Eliot.mp3" download>Télécharger MP3</a>
-          </div>
-          <div class="pdf-preview two-page" id="pdfjs-viewer-2">
-            <div class="pdfjs-container">
-              <canvas id="pdf2-page-1" class="pdf-canvas" aria-label="Numb(er) Piece page 1"></canvas>
-              <canvas id="pdf2-page-2" class="pdf-canvas" aria-label="Numb(er) Piece page 2"></canvas>
-            </div>
-          </div>
-          <div class="pdf-note" aria-live="polite"></div>
-          <div class="audio-player">
-            <h3>Enregistrement — Numb(er) Piece</h3>
-            <audio controls preload="none" id="numb-audio">
-              <source src="Numb(er) Piece Guenin Eliot.mp3" type="audio/mpeg">
-              Votre navigateur ne supporte pas l'élément audio. Vous pouvez <a href="Numb(er) Piece Guenin Eliot.mp3">télécharger le MP3</a>.
-            </audio>
-          </div>
-        </article>
-        </article>
-
-        <article class="work-item">
-          <h2>Petite pièce pour Piano — A ma soeur Nine</h2>
-          <div class="download-row">
-            <a class="download-btn" href="Petite pièce pour Piano - A ma soeur Nine.pdf" download>Télécharger Petite pièce (PDF)</a>
-            <a class="download-btn" href="Petite pièce pour piano, à ma soeur Nine..mp3" download>Télécharger MP3</a>
+            <a class="download-btn" href="Petite pièce pour Piano - A ma soeur Nine.pdf" download data-i18n="download_petite_pdf">Télécharger Petite pièce (PDF)</a>
+            <a class="download-btn" href="Petite pièce pour piano, à ma soeur Nine..mp3" download data-i18n="download_petite_mp3">Télécharger MP3</a>
           </div>
           <div class="pdf-preview two-page" id="pdfjs-viewer-4">
             <div class="pdfjs-container">
@@ -143,10 +121,10 @@
           </div>
           <div class="pdf-note" aria-live="polite"></div>
           <div class="audio-player">
-            <h3>Enregistrement — Petite pièce</h3>
+            <h3 data-i18n="recording_petite">Enregistrement — Petite pièce</h3>
             <audio controls preload="none" id="petite-audio">
               <source src="Petite pièce pour piano, à ma soeur Nine..mp3" type="audio/mpeg">
-              Votre navigateur ne supporte pas l'élément audio. Vous pouvez <a href="Petite pièce pour piano, à ma soeur Nine..mp3">télécharger le MP3</a>.
+              <span data-i18n-html="1" data-i18n="audio_fallback">Votre navigateur ne supporte pas l'élément audio. Vous pouvez <a href="Petite pièce pour piano, à ma soeur Nine..mp3">télécharger le MP3</a>.</span>
             </audio>
           </div>
         </article>
@@ -323,42 +301,14 @@
         function layoutAndRender5() {
           if (!pdfDoc5) return;
           const container = document.querySelector('#pdfjs-viewer-5 .pdfjs-container');
-          const gap = 16;
-          const containerWidth = Math.max(320, container.clientWidth - 32);
-          const narrow = window.innerWidth <= 700;
-          if (narrow) {
-            const target = containerWidth;
-            renderPage5(1, canvas9, ctx9, target);
-            renderPage5(2, canvas10, ctx10, target);
-            canvas9.style.display = 'block';
-            canvas10.style.display = 'block';
-          } else {
-            const pageCount5 = pdfDoc5.numPages || 2;
-            const pagesToCheck5 = Math.min(2, pageCount5);
-            const pagePromises5 = [];
-            for (let i = 1; i <= pagesToCheck5; i++) pagePromises5.push(pdfDoc5.getPage(i));
-            Promise.all(pagePromises5).then(function(pages){
-              const orientations = pages.map(p => { const v = p.getViewport({scale:1}); return v.width > v.height; });
-              const anyLandscape5 = orientations.some(Boolean);
-              if (anyLandscape5) {
-                const target = containerWidth;
-                renderPage5(1, canvas9, ctx9, target);
-                if (pageCount5 >= 2) renderPage5(2, canvas10, ctx10, target);
-                canvas9.style.display = 'block';
-                canvas10.style.display = 'block';
-              } else {
-                const target = Math.floor((containerWidth - gap) / 2);
-                renderPage5(1, canvas9, ctx9, target);
-                if (pageCount5 >= 2) renderPage5(2, canvas10, ctx10, target);
-                canvas9.style.display = 'inline-block';
-                canvas10.style.display = 'inline-block';
-              }
-            }).catch(function(){
-              const target = Math.floor((containerWidth - gap) / 2);
-              renderPage5(1, canvas9, ctx9, target);
-              if (pdfDoc5.numPages >= 2) renderPage5(2, canvas10, ctx10, target);
-            });
-          }
+          const containerWidth = Math.max(280, container.clientWidth - 18);
+          const target = Math.min(containerWidth, 820);
+          renderPage5(1, canvas9, ctx9, target);
+          if (pdfDoc5.numPages >= 2) renderPage5(2, canvas10, ctx10, target);
+          canvas9.style.display = 'block';
+          canvas10.style.display = 'block';
+          canvas9.style.margin = '0 auto 1rem';
+          canvas10.style.margin = '0 auto';
         }
 
         pdfjsLib.getDocument(PDF_URL5).promise.then(function(pdf5){ pdfDoc5 = pdf5; layoutAndRender5(); }).catch(function(err){ console.error('PDF5 load error', err); var containerEl = document.querySelector('#pdfjs-viewer-5'); var note = containerEl && containerEl.closest('.work-item') && containerEl.closest('.work-item').querySelector('.pdf-note'); if(note) note.textContent = 'Impossible de prévisualiser le PDF — veuillez télécharger le fichier.'; });

@@ -28,6 +28,24 @@ html, body{
     line-height: 1.8;
 }
 
+.download-row {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 1rem 0 1.5rem;
+}
+
+.download-btn {
+    display: inline-block;
+    background: #090a0a;
+    color: #fff;
+    padding: 0.45rem 0.85rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
 .site-footer {
     position: fixed;
       bottom: 0;
