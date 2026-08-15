@@ -45,6 +45,7 @@ html, body{
     max-width: 1200px;
     margin: 0 auto 1.5rem;
     box-sizing: border-box;
+    margin-left: 100px;
 }
 
 .pdf-preview.two-page {
@@ -68,11 +69,28 @@ html, body{
     background: white;
 }
 
+#pdfjs-viewer-5 .pdfjs-container {
+    display: block;
+    width: auto;
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+#pdfjs-viewer-5 .pdf-canvas {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 1rem;
+}
+
 .pdf-note { text-align: center; margin-top: .5rem; }
 
 @media (max-width: 700px) {
     .pdfjs-container { flex-direction: column; }
     .pdf-canvas { width: 100%; }
+    #pdfjs-viewer-5 .pdfjs-container { display: block; }
+    #pdfjs-viewer-5 .pdf-canvas { width: auto; max-width: 100%; }
 }
 
 .audio-player {
